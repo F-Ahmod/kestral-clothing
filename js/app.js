@@ -42,11 +42,12 @@ console.log(data)
   const productDetails= document.getElementById('productDetails')
   productDetails.textContent='';
   const div=document.createElement('div')
-  div.className='p-5 border rounded'
+  // div.className='p-5 border rounded';
   div.innerHTML=`
-  <h3>${data.title}</h3>
+  <div class="d-flex align-content-center flex-wrap w-50 mx-auto p-3 mt-3 mb-3 border rounded shadow ">
+  <h3 class="text-success">${data.title}</h3>
   <img src="${data.image}" width =200px height =200px >
-  <p>${data.description}</p>
+  <span class="text-secondary">${data.description}</span></div>
 
   `
   productDetails.appendChild(div);
