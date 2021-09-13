@@ -8,9 +8,6 @@ const loadProducts = () => {
 };
 loadProducts();
 
-// show details 
-
-
 // show all product in UI 
 const showProducts = (products) => {
   const allProducts = products.map((pd) => pd);
@@ -18,14 +15,14 @@ const showProducts = (products) => {
     const image = product.image;
     const div = document.createElement("div");
     div.classList.add("product");
-    div.innerHTML = `<div class="single-product  m-3 rounded-3 shadow">
+    div.innerHTML = 
+     `<div class="single-product  m-3 rounded-3 shadow ">
       <div>
-    <img class="product-image" src=${image}></img>
+      <img class="product-image" src=${image}></img>
       </div>
       <h3>${product.title}</h3>
       <p>Category: ${product.category}</p>
       <p><i class="fas fa-user-alt"></i> ${product.rating.rate} <i class="fas fa-star"></i> ${product.rating.count}</p>
-      
       <h2>Price: $ ${product.price}</h2>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
       <button id="details-btn" class="btn btn-danger" onclick="Details(${product.id})">Details</button></div>
@@ -33,6 +30,7 @@ const showProducts = (products) => {
     document.getElementById("all-products").appendChild(div);
   }
 };
+// show details 
 const Details=(id)=>{
   
   fetch(`https://fakestoreapi.com/products/${id}`)
