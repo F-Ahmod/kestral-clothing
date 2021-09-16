@@ -44,7 +44,7 @@ console.log(data)
   const div=document.createElement('div')
   // div.className='p-5 border rounded';
   div.innerHTML=`
-  <div class="d-flex align-content-center flex-wrap w-50 mx-auto p-3 mt-3 mb-3 border rounded shadow ">
+  <div class=" d-flex align-content-center flex-wrap lg-w-50 md-w-100 mx-auto p-3 mt-3 mb-3 border rounded shadow ">
   <h3 class="text-success">${data.title}</h3>
   <img src="${data.image}" width =200px height =200px >
   <span class="text-secondary">${data.description}</span></div>
@@ -106,3 +106,4 @@ const updateTotal = () => {
     getInputValue("total-tax");
   document.getElementById("total").innerText =parseFloat(grandTotal).toFixed(2);
 };
+
